@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 import './App.css';
+import bookdata from './data.js';
 
 function App() {
   var genres = ['Fiction', 'Biography', 'Self development', 'Finance', 'Technology'];
-  var books = [
-    {
-      bname: "Murder on the Orient Express",
-      rating: "7.5/10",
-      author: "Agatha Christie",
-      genre: "Fiction"
-    },
-    {
-      bname: "Most and More",
-      rating: "8.5/10",
-      author: "Mahatria Ra",
-      genre: "Self development"
-    },
-
-  ]
+  // var books = [
+  //   {
+  //     bname: "Murder on the Orient Express",
+  //     rating: "7.5/10",
+  //     author: "Agatha Christie",
+  //     genre: "Fiction"
+  //   },
+  //   {
+  //     bname: "Most and More",
+  //     rating: "8.5/10",
+  //     author: "Mahatria Ra",
+  //     genre: "Self development"
+  //   },
+  // ]
+  var books = bookdata;
   const [category, setCategory] = useState('Fiction');
   function handleClick(e) {
     console.log('genre sel = ', e);
@@ -46,7 +47,6 @@ function App() {
               </div>
             )
           }
-
         })
       }
 
