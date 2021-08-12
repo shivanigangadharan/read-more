@@ -3,7 +3,7 @@ import './App.css';
 import bookdata from './data.js';
 
 function App() {
-  var genres = ['Fiction', 'Biography', 'Self development', 'Finance', 'Technology'];
+  var genres = ['Fiction', 'Biography', 'Self-development', 'Finance', 'Technology'];
   // var books = [
   //   {
   //     bname: "Murder on the Orient Express",
@@ -25,32 +25,38 @@ function App() {
     setCategory(e);
   }
   return (
-    <div>
-      <h1> Good reads </h1>
-
-      {
-        genres.map((e) => {
-          return (
-            <div>
-              <button onClick={() => handleClick(e)}> {e} </button>
-            </div>
-          )
-        })
-      }
-
-      {
-        books.map((e) => {
-          if (e.genre === category) {
-            return (
-              <div>
-                {e.bname}
-              </div>
-            )
+    <div className="container">
+      <center>
+        <h1> Good Reads ~ The book recommendation app </h1>
+        <div className="flex">
+          {
+            genres.map((e) => {
+              return (
+                <div>
+                  <button className="category" onClick={() => handleClick(e)}> {e} </button>
+                </div>
+              )
+            })
           }
-        })
-      }
-
-
+        </div>
+        <div className="card-container">
+          {
+            books.map((e) => {
+              if (e.genre === category) {
+                return (
+                  <div className="card">
+                    <b>{e.bname}</b><br />
+                    By {e.author} <br />
+                    Rating: {e.rating}<br />
+                    Genre: {e.genre}<br />
+                    <img className="bookimg" src={e.imgUrl} />
+                  </div>
+                )
+              }
+            })
+          }
+        </div>
+      </center>
     </div>
   );
 }
