@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="container">
       <center>
-        <h1> Good Reads ~ The book recommendation app </h1>
+        <h1> Read more ~ The book recommendation app </h1>
         <div className="flex">
           {
             genres.map((e) => {
@@ -45,11 +45,15 @@ function App() {
               if (e.genre === category) {
                 return (
                   <div className="card">
+                    <center>
+                      <img className="bookimg" src={e.imgUrl} />
+                    </center>
                     <b>{e.bname}</b><br />
                     By {e.author} <br />
-                    Rating: {e.rating}<br />
-                    Genre: {e.genre}<br />
-                    <img className="bookimg" src={e.imgUrl} />
+                    <b> Description: </b>{e.description}<br />
+                    <b>Rating:</b> {e.rating}<br />
+                    <b>Genre:</b> {e.genre}<br />
+
                   </div>
                 )
               }

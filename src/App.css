@@ -23,6 +23,8 @@ display: inline;
 .bookimg{
   width: 200px;
   margin: 10px;
+  height: 300px;
+  justify-content: center;
 }
 .flex{
   display: flex;
@@ -35,7 +37,9 @@ display: inline;
 }
 .card{
   box-shadow: 1px 1px 3px 1px lightgrey;
-  padding: 3%;
+  padding: 20px 25px 20px 25px;
   width: 300px;
+  line-height: 25px;
+  text-align: left;
 margin: 20px;
 }
