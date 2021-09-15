@@ -28,6 +28,7 @@ function App() {
     <div className="container">
       <center>
         <h1> Read more ~ The book recommendation app </h1>
+        <h3> Filter books by category and explore some worth-reading recommended books in each genre. </h3>
         <div className="flex">
           {
             genres.map((e) => {
